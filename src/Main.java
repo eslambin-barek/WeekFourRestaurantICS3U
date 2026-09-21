@@ -27,7 +27,14 @@ public class Main {
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-
+		// code under---
+		int CaeserSalad = 6 ;
+		// print restaurant name.
+		System.out.println("Welcome to Eslam's Restaurant!");
+		// ask about 10$ Shawarma bowl
+		System.out.println("We serve our world famous 10$ Shawarma bowls as a main dish here. How much would you like?");
+		int num1 = in.nextInt();
+		System.out.println("We serve +CaeserSalad+ , ");
 	}
 
 }
