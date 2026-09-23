@@ -62,7 +62,8 @@ public class Main {
 
 		System.out.println(Price > 30);
 		boolean SpecialPrice1 = true;
-		if (Price > 30) { 
+	
+		if (SpecialPrice1) { 
 			  System.out.println("You got a 10% discount! Your new price is "+SpecialPrice1+" ");
 			} else {
 			  System.out.println("Thank you for choosing Eslam's Restaurant!");
