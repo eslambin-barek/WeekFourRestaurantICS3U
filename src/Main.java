@@ -56,20 +56,32 @@ public class Main {
 		double miniPrice3 = num3*2;
 		double miniPrice4 = num3*3;
 		double miniPrice5 = num5*4;
-		double Price = miniPrice1 + miniPrice2 + miniPrice3 + miniPrice4 + miniPrice5*1.13  ;
-
+		double originalPrice = miniPrice1 + miniPrice2 + miniPrice3 + miniPrice4 + miniPrice5  ;
+		double Price = originalPrice*1.13;
 		System.out.println("Your total price comes out to "+Price+"$ ");
 
-		System.out.println(Price > 30);
+		double discountPrice2 = Price*0.80;
+		double discountPrice1 = Price*0.90;
+		if (Price > 50) {
+			boolean SpecialPrice2 = true;
+			
+			if (SpecialPrice2) 
+				System.out.println("You got a 20% discount! Your new price is "+discountPrice2+" ");
+			System.out.println("Thank you for choosing Eslam's Restaurant!");
+		}
+		
+		else if (Price > 30) {
 		boolean SpecialPrice1 = true;
-	
-		if (SpecialPrice1) { 
-			  System.out.println("You got a 10% discount! Your new price is "+SpecialPrice1+" ");
-			} else {
-			  System.out.println("Thank you for choosing Eslam's Restaurant!");
+		
+		if (SpecialPrice1) 
+			 System.out.println("You got a 10% discount! Your new price is "+discountPrice1+" ");
+		  System.out.println("Thank you for choosing Eslam's Restaurant!");
 			}
-		if (Price > 50)
-			  System.out.println("You get a 20% discount!");
+		
+			  else
+			  System.out.println("Thank you for choosing Eslam's Restaurant!");
+			
+		
 	}
 
 }
