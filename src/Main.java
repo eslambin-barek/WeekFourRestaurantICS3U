@@ -51,11 +51,12 @@ public class Main {
 		double originalPrice = miniPrice1 + miniPrice2 + miniPrice3 + miniPrice4 + miniPrice5;
 		double Price = originalPrice * 1.13;
 		System.out.println("Your total price comes out to " + Price + "$ ");
-
+		
 		double discountPrice1 = 0;
 		double discountPrice2 = 0;
-		 boolean SpecialPrice1;
-		 boolean SpecialPrice2;
+		 boolean SpecialPrice1 = false;
+		 boolean SpecialPrice2 = false;
+		 boolean NormalPrice = false;
 		if (Price > 50) {
 			SpecialPrice1 = true;
 			discountPrice1=Price*0.8;
@@ -70,89 +71,107 @@ public class Main {
 			System.out.println("Oh! You got a 10% discount! Your new price is " + discountPrice2 + " ");
 		
 		}
-
+		if (Price<30) {
+			NormalPrice = true;
+		}
 		double TotalPrice = discountPrice2;
 
 		System.out.println("Please pay by cash!");
 		double payment = in.nextDouble();
 		
-		
 		 
-		 if ( SpecialPrice1 = true) {
-			if (payment>discountPrice1 ) {
-		
-			 double change = payment-discountPrice1;
-			 System.out.println("You've paid extra! your change is "+ change +". ");
-			 System.out.println("Thank you for coming!");
-			 }
-			if (payment<discountPrice1 ) {
-				double RemainingCash = discountPrice1 - payment;
+		 if ( SpecialPrice1 == true) {
+			 if (payment<discountPrice1 ) {
+				 double RemainingCash = discountPrice1 - payment;
 				 double change = payment-discountPrice1;
-			
-				while (discountPrice1<payment) {
-					RemainingCash = discountPrice1 - payment;
-					System.out.println("You haven't paid the full amount. Please pay the remaining "+ RemainingCash +" ");
-				  payment = in.nextDouble();
-				  
-				}
-				 }
-			if ( payment == discountPrice1 ) {
 				
-				 double change = payment-discountPrice1;
+				 while (discountPrice1>payment) {
+					 RemainingCash = discountPrice1 - payment;
+					 System.out.println("You haven't paid the full amount. Please pay the remaining "+ RemainingCash +" ");
+					 payment = in.nextDouble();
+					 
+				 }
+				 	
+				 
+			 }
+		 }
+			 if (payment>discountPrice1 ) {
+		
+			 double change0 = payment-discountPrice1;
+			 System.out.println("You've paid extra! your change is "+ change0 +". ");
+			 System.out.println("Thank you for coming!");
+			 
+			
+			
+			
+				if ( payment == discountPrice1 ) {
+				
+				 double change1 = payment-discountPrice1;
 				 
 				 System.out.println("Thank you for coming!");
+				 	
+				 	}
+		
+			
+			 if ( SpecialPrice2 == true) {
+				 if (payment<discountPrice2 ) {
+					 double RemainingCash1 = discountPrice2 - payment;
+					 
+					 while (discountPrice2>payment) {
+						 RemainingCash1 = discountPrice2 - payment;
+						 System.out.println("You haven't paid the full amount. Please pay the remaining "+ RemainingCash1 +" ");
+						 payment = in.nextDouble();
+						 double change1 = payment-discountPrice2;
+					 }
+					 
 				 }
-			 if ( SpecialPrice2 = true) {
 					if (payment>discountPrice2 ) {
 				
-					 double change = payment-discountPrice2;
-					 System.out.println("You've paid extra! your change is "+ change +". ");
+					 double change11 = payment-discountPrice2;
+					 System.out.println("You've paid extra! your change is "+ change11 +". ");
 					 System.out.println("Thank you for coming!");
 					 }
-					if (payment<discountPrice2 ) {
-						double RemainingCash = discountPrice2 - payment;
-						 double change = payment-discountPrice2;
-					
-						while (discountPrice2<payment) {
-							RemainingCash = discountPrice2 - payment;
-							System.out.println("You haven't paid the full amount. Please pay the remaining "+ RemainingCash +" ");
-						  payment = in.nextDouble();
-						  
-						}
-						 }
+						
+						 
 					if ( payment == discountPrice2 ) {
 						
-						 double change = payment-discountPrice2;
+						 double change2 = payment-discountPrice2;
 						 
 						 System.out.println("Thank you for coming!");
 						 }
-					if (payment>Price ) {
-						
-						 double change = payment-Price;
-						 System.out.println("You've paid extra! your change is "+ change +". ");
-						 System.out.println("Thank you for coming!");
+					 if ( NormalPrice == true) {
+					 }
+					 if (payment<Price ) {
+						 double RemainingCash2 = Price - payment;
+						 
+						 
+						 while (discountPrice2<payment) {
+							 RemainingCash2 = discountPrice1 - payment;
+							 System.out.println("You haven't paid the full amount. Please pay the remaining "+ RemainingCash2 +" ");
+							 payment = in.nextDouble();
+							 double change2 = payment-Price;	
+							 
+							 System.out.println("You've paid extra! your change is "+ change2 +". ");
 						 }
-						if (payment<Price ) {
-							double RemainingCash = Price - payment;
-							 double change = payment-Price;
+					 }
+						if (payment>Price ) {
 						
-							while (discountPrice2<payment) {
-								RemainingCash = discountPrice1 - payment;
-								System.out.println("You haven't paid the full amount. Please pay the remaining "+ RemainingCash +" ");
-							  payment = in.nextDouble();
-							  
-							}
+						 double change2 = payment-Price;
+						 System.out.println("You've paid extra! your change is "+ change2 +". ");
+						 System.out.println("Thank you for coming!");
+						
 							 }
 						if ( payment == Price ) {
 							
-							 double change = payment-Price;
+							 
 							 
 							 System.out.println("Thank you for coming!");
 							 }
+					 }
 		}
-		 
+			 
 	
 	}
 
 	}
-}
+
