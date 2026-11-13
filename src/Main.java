@@ -115,14 +115,16 @@ public class Main {
 			
 			 if ( SpecialPrice2 == true) {
 				 if (payment<discountPrice2 ) {
-					 double RemainingCash1 = discountPrice2 - payment;
-					 
+					 double RemainingCash = discountPrice2 - payment;
+					 double change = payment-discountPrice2;
+					
 					 while (discountPrice2>payment) {
-						 RemainingCash1 = discountPrice2 - payment;
-						 System.out.println("You haven't paid the full amount. Please pay the remaining "+ RemainingCash1 +" ");
+						 RemainingCash = discountPrice2 - payment;
+						 System.out.println("You haven't paid the full amount. Please pay the remaining "+ RemainingCash +" ");
 						 payment = in.nextDouble();
-						 double change1 = payment-discountPrice2;
+						 
 					 }
+					 	
 					 
 				 }
 					if (payment>discountPrice2 ) {
