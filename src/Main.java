@@ -87,13 +87,14 @@ public class Main {
 				
 				 while (discountPrice1>payment) {
 					 RemainingCash = discountPrice1 - payment;
-					 System.out.println("You haven't paid the full amount. Please pay "+ RemainingCash +" ");
+					 System.out.println("You haven't paid the full amount. Please pay the remaining "+ RemainingCash +"$ ");
 					 discountPrice1 = RemainingCash;
 					 payment = in.nextDouble();
-					
+					 }
+				 
 					 if (payment>discountPrice1 ) {
 							
-						 double change0 = payment-discountPrice1;
+						  double change0 = payment-discountPrice1;
 						 System.out.println("You've paid extra! your change is "+ change0 +". ");
 						 System.out.println("Thank you for coming!");
 					 }
@@ -102,14 +103,14 @@ public class Main {
 					
 					 
 					 
-					 if ( payment == discountPrice1 ) {
+					 if ( payment == discountPrice1) {
 						 
 						 double change1 = payment-discountPrice1;
 						 
 						 System.out.println("Thank you for coming!");
 						 
 					 }
-			 }
+			
 		 }
 		 
 			 
@@ -121,12 +122,21 @@ public class Main {
 					
 					 while (discountPrice2>payment) {
 						 RemainingCash = discountPrice2 - payment;
-						 System.out.println("You haven't paid the full amount. Please pay "+ RemainingCash +" ");
+						 System.out.println("You haven't paid the full amount. Please pay the remaining "+ RemainingCash +"$ ");
 						 discountPrice2 = RemainingCash;
 						 payment = in.nextDouble();
+					 }
+				 }
+				 		if ( payment == discountPrice2 ) {
+							 
+							 double change1 = payment-discountPrice2;
+							 
+							 System.out.println("Thank you for coming!");
+							 
 						 }
+						 
 					 
-						 if (payment>discountPrice1 ) {
+						 if (payment>discountPrice2 ) {
 								
 							  double change0 = payment-discountPrice2;
 							 System.out.println("You've paid extra! your change is "+ change0 +". ");
@@ -135,46 +145,43 @@ public class Main {
 					 	
 					 
 						
+			 } 
 						 
-						 
-						 if ( payment == discountPrice2 ) {
-							 
-							 double change1 = payment-discountPrice2;
-							 
-							 System.out.println("Thank you for coming!");
-							 
-						 }
 				
-			 }
-			 }
+			 
+			 
 					 if ( NormalPrice == true) {
 					 
-					 if (payment<Price ) {
-						 double RemainingCash = Price - payment;
-						 
-						 
-						 while (Price<payment) {
-							 RemainingCash = discountPrice1 - payment;
-							 System.out.println("You haven't paid the full amount. Please pay "+ RemainingCash +" ");
-							 payment = in.nextDouble();
-							 double change2 = payment-Price;	
-							 
-							 System.out.println("You've paid extra! your change is "+ change2 +". ");
-						 }
-					 }
-						if (payment>Price ) {
-						
-						 double change2 = payment - Price;
-						 System.out.println("You've paid extra! your change is "+ change2 +". ");
-						 System.out.println("Thank you for coming!");
-						
-							 }
-						if ( payment == Price ) {
+						 if (payment<Price ) {
+							 double RemainingCash = Price - payment;
+							 double change = payment-Price;
 							
-						
+							 while (Price>payment) {
+								 RemainingCash = Price - payment;
+								 System.out.println("You haven't paid the full amount. Please pay the remaining "+ RemainingCash +"$ ");
+								 Price = RemainingCash;
+								 payment = in.nextDouble();
+								 }
+						 }
+								 if (payment>Price ) {
+										
+									  double change0 = payment-Price;
+									 System.out.println("You've paid extra! your change is "+ change0 +". ");
+									 System.out.println("Thank you for coming!");
+								 }
+							 	
 							 
-							 System.out.println("Thank you for coming!");
-							 }
+								
+								 
+								 
+								 if ( payment == Price ) {
+									 
+									 double change1 = payment-Price;
+									 
+									 System.out.println("Thank you for coming!");
+									 
+								 }
+						
 					 }
 		
 			 
@@ -183,4 +190,4 @@ public class Main {
 	}
 	
 	
-// NOTE: make sure to copy paste the entire line of code into normal price tommorow if not finished today
+// NOTE: make sure to copy paste the entire line of code into normal price tommorow if not finished today also fix the first lines of code for specialprice1
